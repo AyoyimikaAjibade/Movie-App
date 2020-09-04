@@ -26,7 +26,6 @@ def create(request):
                 rating=data.get('rating'),
                 notes=data.get('notes'),
             )
-            print(2/0)
             messages.success(request, f"New Movie Added {data.get('name')}!")
         except Exception as e:
             messages.warning(request, f"Got an error when trying to create new movie {e}.")
