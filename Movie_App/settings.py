@@ -125,19 +125,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 # The absolute path to the directory where collectstatic will collect static files for deployment.
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, '/movies/static')
 
 # The URL to use when referring to static files (where they will be served from)
-STATIC_URL = '/static/'
+STATIC_URL = '/movies/static/'
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-STATIC_TMP = os.path.join(BASE_DIR, 'static')
-
-os.makedirs(STATIC_TMP, exist_ok=True)
-os.makedirs(STATIC_ROOT, exist_ok=True)
 
 # Heroku: Update database configuration from $DATABASE_URL.
 import dj_database_url
