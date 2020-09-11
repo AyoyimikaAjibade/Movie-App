@@ -131,7 +131,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, '/movies/static')
 STATIC_URL = '/movies/static/'
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, '/movies/static'),
 )
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
