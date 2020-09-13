@@ -29,7 +29,7 @@ SECRET_KEY = '-kpl(n-&%&!r#0avrxr#k4oju23fn@be1pa-o0ib7g&f(2u6pp'
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['ayoyimika-movieapp.herokuapp.com', '127.0.0.1']
 
