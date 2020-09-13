@@ -9,26 +9,28 @@ def home_page(request):
     stuff_for_frontend = {'search_result': search_result}
     return render(request, 'movies/movies_stuff.html', stuff_for_frontend)
 
+
 def create(request):
     if request.method == 'POST':
-        # the data object gotten from the form
         data = {
-            'name':request.POST.get('name'),
+            'name': request.POST.get('name'),
             'picture': request.POST.get('picture'),
             'rating': int(request.POST.get('rating')),
-            'notes': request.POST.get('notes'),
+            'notes': request.POST.get('notes')
         }
         try:
-            # add the data gotten from the form to the database through the create method
+
             response = Movie.objects.create(
                 name=data.get('name'),
                 picture=data.get('picture'),
                 rating=data.get('rating'),
                 notes=data.get('notes'),
+
             )
-            messages.success(request, f"New Movie Added {data.get('name')}!")
+            messages.success(request, 'New movie added: {}'.format(data.get('name')))
         except Exception as e:
-            messages.warning(request, f"Got an error when trying to create new movie {e}.")
+            messages.warning(
+                request, 'Got an error when trying to create new movie: {}'.format(e))
     return redirect('/')
 
 
