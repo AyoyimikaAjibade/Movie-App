@@ -26,4 +26,4 @@ python manage.py runserver
 ```
 ### Go and check `http://127.0.0.1:8000`
 
-###Hosted ---> https://ayoyimika-movieapp.herokuapp.com
+### Hosted ---> https://ayoyimika-movieapp.herokuapp.com
