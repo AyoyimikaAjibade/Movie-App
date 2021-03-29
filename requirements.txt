@@ -12,6 +12,7 @@ mccabe==0.6.1
 psycopg2==2.8.6
 pycodestyle==2.6.0
 pylint==2.6.0
+python-dotenv==0.16.0
 pytz==2020.1
 six==1.15.0
 sqlparse==0.3.1
